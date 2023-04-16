@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 
-import Providers from "@/components/providers";
+import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +20,8 @@ export default function RootLayout({
       <body className="min-h-screen bg-slate-50 dark:bg-slate-900 antialiased">
         <Providers>
           {children}
-          <Navbar />
+          {/*  @ts-expected-error Server Component */}
+          {/* <Navbar /> */}
         </Providers>
 
         {/* Allow for more heigh on mobile devices */}
